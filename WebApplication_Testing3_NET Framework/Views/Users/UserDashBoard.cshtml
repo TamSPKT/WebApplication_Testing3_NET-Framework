@@ -1,0 +1,75 @@
+﻿@model WebApplication_Testing3_NET_Framework.Models.User
+
+@{
+    ViewBag.Title = "User DashBoard";
+}
+
+<fieldset>
+    <legend> User DashBoard </legend>
+
+    @if (Session["UserName"] != null)
+    {
+        <div>
+            <h4>Welcome @Session["UserName"].ToString()</h4>
+            <hr />
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.UserName)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.UserName)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Password)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Password)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Email)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Email)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.SDT)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.SDT)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Address)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Address)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Avatar)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Avatar)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Allowed)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Allowed)
+                </dd>
+
+            </dl>
+        </div>
+    }
+</fieldset>
